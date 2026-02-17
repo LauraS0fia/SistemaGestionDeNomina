@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Nómina</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,8 +18,11 @@
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- Sección para agregar empleados !-->
         <div class="agregar-empleados">
+
             <h2>Agregar empleado</h2>
             <form id="formulario-empleado">
                 <label for="nombre">Nombre:</label>
@@ -33,7 +36,8 @@
 
                 <label for="nivel-arl">Nivel Riesgo ARL:</label>
                 <input type="number" id="nivel-arl" name="nivel-arl" required>
-            <h2>Agregar horas extras</h2>      
+                <!--NECESARI EDITAR ESTILO DE HORAS EXTRA-->
+                <h2>Agregar horas extras</h2>      
                 <label for="HED">Horas Extra Diurnas</label>
                 <input type="number" id="HED" name="HED" required>
                 
@@ -46,10 +50,12 @@
                 <label for="HENF">Horas Extra Festivas Nocturnas</label>
                 <input type="number" id="HENF" name="HENF" required>
                 
-                <button type="submit">Guardar</button>
+                <button id="submit" type="submit">Guardar</button>
             </form>
 
         </div>
+
+        <div class="divisor"></div>
 
         <h2>Gestión empleados</h2>
 
@@ -68,7 +74,7 @@
                 
                 </tr>
             </thead>
-            <tbody id="userTable"></tbody>
+            <tbody id="TablaEmpleados"></tbody>
         </table>
     </main>
 </body>
