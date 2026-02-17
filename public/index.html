@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nómina</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Nómina</h1>
+        <nav>
+            <ul>
+                <li><a href="#empleados">Empleados</a></li>
+                <li><a href="#nomina">Nómina</a></li>
+                <li><a href="#reportes">Reportes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="agregar-empleados">
+            <h2>Agregar empleado</h2>
+            <form id="formulario-empleado">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="Sbasico">Sueldo Basico:</label>
+                <input type="number" id="Sbasico" name="Sbasico" required>
+
+                <label for="Dias">Dias Trabajados:</label>
+                <input type="number" id="Dias" name="Dias" required>
+
+                <label for="nivel-arl">Nivel Riesgo ARL:</label>
+                <input type="number" id="nivel-arl" name="nivel-arl" required>
+            <h2>Agregar horas extras</h2>      
+                <label for="HED">Horas Extra Diurnas</label>
+                <input type="number" id="HED" name="HED" required>
+                
+                <label for="HEN">Horas Extra Nocturnas</label>
+                <input type="number" id="HEN" name="HEN" required>
+                
+                <label for="HEDF">Horas Extra Festivas Diurnas</label>
+                <input type="number" id="HEDF" name="HEDF" required>
+                
+                <label for="HENF">Horas Extra Festivas Nocturnas</label>
+                <input type="number" id="HENF" name="HENF" required>
+                
+                <button type="submit">Guardar</button>
+            </form>
+
+        </div>
+
+        <h2>Gestión empleados</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Sueldo</th>
+                    <th>Auxilio</th>
+                    <th>Horas Extra</th>
+                    <th>Devengado</th>
+                    <th>Salud</th>
+                    <th>Pensión</th>
+                    <th>Deducciones</th>
+                    <th>Neto</th>
+                
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </main>
+</body>
+</html>
