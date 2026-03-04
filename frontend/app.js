@@ -25,8 +25,8 @@ async function loadUsers() {
                 <td>${u.deducciones}</td>
                 <td>${u.neto}</td>
                 <td>
-                    <button onclick="editUser('${u.id}', '${u.nombre}', ${u.Sbasico}, ${u.Dias}, ${u.nivel_arl}, ${u.HED}, ${u.HEN}, ${u.HEDF}, ${u.HENF})">Editar</button>
-                    <button onclick="deleteUser('${u.id}')">Eliminar</button>
+                    <button class="btn-edit" onclick="editUser('${u.id}', '${u.nombre}', ${u.Sbasico}, ${u.Dias}, ${u.nivel_arl}, ${u.HED}, ${u.HEN}, ${u.HEDF}, ${u.HENF})">Editar</button>
+                    <button class="btn-delete" onclick="deleteUser('${u.id}')">Eliminar</button>
                 </td>
             </tr>
         `;
@@ -107,4 +107,5 @@ formulario.addEventListener("submit", async (e) => {
     }
 });
 
-//inicializar cargar empleados al abrir la pagina 
+//inicializar cargar empleados al abrir la pagina
+loadUsers();

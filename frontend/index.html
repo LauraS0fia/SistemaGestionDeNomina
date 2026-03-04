@@ -1,6 +1,5 @@
-<!-- formulario y tabla -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +8,29 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Sistema de Nómina</h1>
-        <nav>
+    <header class="topbar">
+        <div class="brand">
+            <h1>Sistema de Nómina</h1>
+            <p>Gestión inteligente de empleados y pagos</p>
+        </div>
+        <nav class="main-nav">
             <ul>
                 <li><a href="#empleados">Empleados</a></li>
-                <li><a href="#nomina">Nómina</a></li>
-                <li><a href="#reportes">Reportes</a></li>
+                <li><a href="#gestion">Gestión</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Sección para agregar empleados !-->
-        <div class="agregar-empleados">
+    <main class="layout" id="empleados">
+        <section class="card agregar-empleados">
+            <div class="card-header">
+                <h2>Agregar empleado</h2>
+                <span class="chip">Formulario</span>
+            </div>
 
-            <h2>Agregar empleado</h2>
             <form id="formulario-empleado">
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Laura Pérez" required>
 
                 <label for="Sbasico">Sueldo Basico:</label>
                 <input type="number" id="Sbasico" name="Sbasico" required>
@@ -37,8 +40,8 @@
 
                 <label for="nivel-arl">Nivel Riesgo ARL:</label>
                 <input type="number" id="nivel-arl" name="nivel-arl" required>
-                <!--NECESARI EDITAR ESTILO DE HORAS EXTRA-->
-                <h2>Agregar horas extras</h2>      
+
+                <h3>Agregar horas extras</h3>
                 <label for="HED">Horas Extra Diurnas</label>
                 <input type="number" id="HED" name="HED" required>
                 
@@ -50,33 +53,37 @@
                 
                 <label for="HENF">Horas Extra Festivas Nocturnas</label>
                 <input type="number" id="HENF" name="HENF" required>
-                
+
                 <button id="submit" type="submit">Guardar</button>
             </form>
+        </section>
 
-        </div>
+        <section class="card" id="gestion">
+            <div class="card-header">
+                <h2>Gestión empleados</h2>
+                <span class="chip">Listado</span>
+            </div>
 
-        <div class="divisor"></div>
-
-        <h2>Gestión empleados</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Sueldo</th>
-                    <th>Auxilio</th>
-                    <th>Horas Extra</th>
-                    <th>Devengado</th>
-                    <th>Salud</th>
-                    <th>Pensión</th>
-                    <th>Deducciones</th>
-                    <th>Neto</th>
-                
-                </tr>
-            </thead>
-            <tbody id="TablaEmpleados"></tbody>
-        </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Sueldo</th>
+                            <th>Auxilio</th>
+                            <th>Horas Extra</th>
+                            <th>Devengado</th>
+                            <th>Salud</th>
+                            <th>Pensión</th>
+                            <th>Deducciones</th>
+                            <th>Neto</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="TablaEmpleados"></tbody>
+                </table>
+            </div>
+        </section>
     </main>
 </body>
 </html>
