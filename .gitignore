@@ -1,0 +1,35 @@
+# ── Entorno virtual Python ──
+venv/
+env/
+.env
+*.env
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Node / React / Frontend ──
+node_modules/
+dist/
+.next/
+.cache/
+
+# ── IDEs ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Sistema operativo ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── MongoDB local ──
+*.mongodb
