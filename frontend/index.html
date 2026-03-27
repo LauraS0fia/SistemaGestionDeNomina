@@ -4,28 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Nómina</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="app.js" defer></script>
 </head>
 <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
     <header class="topbar">
         <div class="brand">
+            <p class="eyebrow">Centro de Control</p>
             <h1>Sistema de Nómina</h1>
-            <p>Gestión inteligente de empleados y pagos</p>
+            <p>Gestiona empleados, cálculos y novedades desde un solo panel</p>
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="#empleados">Empleados</a></li>
+                <li><a href="#empleados">Registrar</a></li>
+                <li><a href="#resumen">Resumen</a></li>
                 <li><a href="#gestion">Gestión</a></li>
             </ul>
         </nav>
     </header>
 
+    <section class="summary" id="resumen">
+        <article class="summary-card">
+            <p class="summary-label">Empleados</p>
+            <p class="summary-value" id="total-empleados">0</p>
+        </article>
+        <article class="summary-card">
+            <p class="summary-label">Nómina Total</p>
+            <p class="summary-value" id="total-nomina">$0</p>
+        </article>
+        <article class="summary-card">
+            <p class="summary-label">Promedio Neto</p>
+            <p class="summary-value" id="promedio-neto">$0</p>
+        </article>
+    </section>
+
     <main class="layout" id="empleados">
         <section class="card agregar-empleados">
             <div class="card-header">
                 <h2>Agregar empleado</h2>
-                <span class="chip">Formulario</span>
+                <span class="chip" id="form-mode">Nuevo</span>
             </div>
 
             <form id="formulario-empleado">
