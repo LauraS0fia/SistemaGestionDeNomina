@@ -2,22 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Sistema de Nómina - Gestión de empleados y cálculos de nómina">
+    <meta name="theme-color" content="#1177cc">
     <title>Sistema de Nómina</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="app.js" defer></script>
 </head>
 <body>
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
 
-    <header class="topbar">
+    <header class="topbar" role="banner">
         <div class="brand">
             <p class="eyebrow">Centro de Control</p>
             <h1>Sistema de Nómina</h1>
             <p>Gestiona empleados, cálculos y novedades desde un solo panel</p>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" role="navigation" aria-label="Navegación principal">
             <ul>
                 <li><a href="#empleados">Registrar</a></li>
                 <li><a href="#resumen">Resumen</a></li>
@@ -26,7 +28,7 @@
         </nav>
     </header>
 
-    <section class="summary" id="resumen">
+    <section class="summary" id="resumen" role="region" aria-label="Resumen general">
         <article class="summary-card">
             <p class="summary-label">Empleados</p>
             <p class="summary-value" id="total-empleados">0</p>
@@ -41,7 +43,7 @@
         </article>
     </section>
 
-    <main class="layout" id="empleados">
+    <main class="layout" id="empleados" role="main">
         <section class="card agregar-empleados">
             <div class="card-header">
                 <h2>Agregar empleado</h2>
@@ -85,19 +87,19 @@
             </div>
 
             <div class="table-wrapper">
-                <table>
+                <table role="table">
                     <thead>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Sueldo</th>
-                            <th>Auxilio</th>
-                            <th>Horas Extra</th>
-                            <th>Devengado</th>
-                            <th>Salud</th>
-                            <th>Pensión</th>
-                            <th>Deducciones</th>
-                            <th>Neto</th>
-                            <th>Acciones</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Sueldo</th>
+                            <th scope="col">Auxilio</th>
+                            <th scope="col">Horas Extra</th>
+                            <th scope="col">Devengado</th>
+                            <th scope="col">Salud</th>
+                            <th scope="col">Pensión</th>
+                            <th scope="col">Deducciones</th>
+                            <th scope="col">Neto</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="TablaEmpleados"></tbody>
